@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clinton-Pase Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+
+<script>
+  tailwind.config = {
+    darkMode: "class", // enable dark mode toggle
+    theme: {
+      extend: {
+        fontFamily: {
+          raleway: ["Raleway", "sans-serif"],
+        },
+        keyframes: {
+          scrollUp: {
+            "0%": { opacity: "0", transform: "translateY(30px)" },
+            "100%": { opacity: "1", transform: "translateY(0)" },
+          },
+        },
+        animation: {
+          scrollUp: "scrollUp 1s ease forwards",
+        },
+      },
+
+      //  add max-width breakpoints here
+      screens: {
+        xl: { max: "1279px" },
+        lg: { max: "1023px" },
+        md: { max: "767px" },
+        sm: { max: "639px" },
+      },
+    },
+  }
+</script>
+
+  <script src="https://kit.fontawesome.com/2dac8e0423.js" crossorigin="anonymous"></script>
+ 
+
+  <script src="https://cdn.tailwindcss.com">
+
+  </script>
+</head>
+
+<body class="transition-colors duration-300">
+<nav class="top-0 w-full bg-black dark:bg-white backdrop-filter backdrop-blur-[10px] py-4 transition-all duration-300" id="navbar">
+  <div class="max-w-[1200px] mx-auto px-8 flex items-center relative">
+
+    <!-- Left: Logo -->
+    <a href="#" class="font-raleway text-white dark:text-black text-2xl font-bold no-underline">
+      Clinton-Pase
+    </a>
+
+    <!-- Center: Links (desktop only) -->
+    <ul class="absolute left-1/2 transform -translate-x-1/2 flex gap-8 list-none max-lg:hidden">
+      <li><a href="#skills" class="font-raleway text-white dark:text-black hover:opacity-70">Skills</a></li>
+      <li><a href="#projects" class="font-raleway text-white dark:text-black hover:opacity-70">Projects</a></li>
+      <li><a href="#contact" class="font-raleway text-white dark:text-black hover:opacity-70">Contact</a></li>
+    </ul>
+
+    <!-- Dark/Light Toggle (desktop only) -->
+      <a href="https://github.com/Clinton-Pase"
+       target="_blank"
+       class="ml-auto w-10 h-10 flex items-center justify-center rounded-full bg-[linear-gradient(135deg,#667eea,#764ba2)]  text-white dark:bg-gray-200 dark:text-black shadow-md transition hover:scale-110 hover:opacity-80 max-lg:hidden">
+      <i class="fab fa-github https://github.com/Clinton-Pasetext-xl"></i>
+    </a>
+
+    <!-- Hamburger Menu (mobile only) -->
+    <button id="hamburger" class="ml-auto w-[40px] h-[40px]  flex items-center justify-center rounded-md bg-[linear-gradient(135deg,#667eea,#764ba2)] text-white dark:bg-gray-200 dark:text-black shadow-md transition hidden max-lg:flex">
+      ☰
+    </button>
+
+  </div>
+</nav>
+
+<!-- Side Menu -->
+<div id="side-menu" class="fixed top-0 right-0 h-full w-64 bg-black dark:bg-white text-white dark:text-black transform translate-x-full transition-transform duration-300 z-50 p-6 flex flex-col">
+  <!-- Close Button -->
+  <button id="close-menu" class="self-end text-2xl">✖</button>
+
+  <!-- Links -->
+  <ul class="mt-10 space-y-6 text-lg">
+    <li><a href="#skills" class="block hover:opacity-70">Skills</a></li>
+    <li><a href="#projects" class="block hover:opacity-70">Projects</a></li>
+    <li><a href="#contact" class="block hover:opacity-70">Contact</a></li>
+  </ul>
+
+  <!-- Theme Toggle -->
+  <a href="https://github.com/Clinton-Pase"
+     target="_blank"
+     class="mt-auto w-10 h-10 flex items-center justify-center rounded-full bg-[linear-gradient(135deg,#667eea,#764ba2)] text-white dark:bg-gray-200 dark:text-black shadow-md transition hover:scale-110 hover:opacity-80">
+    <i class="fab fa-github text-xl"></i>
+  </a>
+</div>
+
+<section id="home" 
+  class="min-h-screen bg-black flex flex-col items-center justify-center text-center text-white px-4 
+  sm:py-6 sm:gap-2">
+
+  <!-- Profile Image -->
+  <div class="w-[250px] h-[250px] rounded-full bg-gray-50 flex items-center justify-center mx-auto mt-8
+    lg:w-[200px] lg:h-[200px] md:w-[160px] md:h-[160px] sm:w-[130px] sm:h-[130px] sm:mt-6">
+    <img src="Images/PHOTO-2025-08-28-15-56-31.jpg" alt="my picture"
+      class="w-[230px] h-[230px] rounded-full object-cover animate-pulse 
+      lg:w-[180px] lg:h-[180px] md:w-[140px] md:h-[140px] sm:w-[110px] sm:h-[110px]" />
+  </div>
+
+  <!-- Name -->
+  <h1 class="font-raleway text-[3rem] text-white mt-4 animate-fadeInUp 
+    lg:text-[3rem] md:text-[] sm:text-[] sm:mt-3">
+    Clinton-Pase Adebowale
+  </h1>
+
+  <!-- Role -->
+  <p class="text-[2rem] mb-2 bg-[linear-gradient(135deg,#764ba2,#667eea)] font-bold bg-clip-text 
+    lg:text-[1.5rem] md:text-[1.2rem] sm:text-[1rem] sm:mb-2">
+    Frontend Engineer
+  </p>
+
+  <!-- Description -->
+<div class="flex justify-center items-center text-center px-4">
+  <p id="typewriter"
+     class="font-raleway max-w-[800px] w-full mx-auto px-4 sm:px-6
+            text-[0.95rem] sm:text-[1.1rem] md:text-[1.2rem]
+            leading-relaxed text-white">
+  </p>
+</div>
+  <!-- Download CV Button -->
+<a href="https://drive.google.com/file/d/1t2g-DQcTI3qrAAvsEEia4yZN6qdI_stb/view"
+   class="js-scroll-up opacity-0 font-raleway inline-block mt-6 px-[40px] py-[15px] bg-gray-50 text-gray-950 no-underline rounded-[50px] font-bold hover:opacity-80 transition 
+          lg:px-[32px] lg:py-[12px] md:px-[28px] md:py-[10px] sm:px-[24px] sm:py-[8px] sm:text-[0.9rem] sm:mt-4 mb-10 sm:mb-4">
+  Download CV
+</a>
+</section>
+
+  <!-- Skills Section -->
+<section id="skills" class="bg-black pb-4   sm:pb-2">
+  <h2 class="font-raleway text-center text-white text-[3rem] p-2 font-bold mb-2">
+    Skills & Technologies
+  </h2>
+  <p class="font-raleway text-center text-white text-[1.3rem] mb-6">
+    These are the technologies I've worked with and built projects in
+  </p>
+
+  <div class="grid grid-cols-[repeat(auto-fit,_minmax(300px,_2fr))] gap-8 px-4 
+              sm:grid-cols-3 lg:grid-cols-3 sm:gap-4 sm:px-4">
+
+    <!-- HTML5 -->
+    <div class="bg-gray-50 p-6 rounded-xl text-center shadow-md
+                transition-transform duration-300 ease-in-out
+                hover:scale-105 hover:shadow-[0_0_20px_rgba(118,75,162,0.6)]">
+      <div class="text-[3rem] mb-4 bg-[linear-gradient(135deg,#764ba2,#667eea)] bg-clip-text">
+        <i class="fa-brands fa-html5"></i>
+      </div>
+      <h3 class="font-raleway font-bold">HTML5</h3>
+    </div>
+
+    <!-- CSS -->
+    <div class="bg-gray-50 p-6 rounded-xl text-center shadow-md
+                transition-transform duration-300 ease-in-out
+                hover:scale-105 hover:shadow-[0_0_20px_rgba(118,75,162,0.6)]">
+      <div class="text-[3rem] mb-4 bg-[linear-gradient(135deg,#764ba2,#667eea)] bg-clip-text">
+        <i class="fa-brands fa-css3-alt"></i>
+      </div>
+      <h3 class="font-raleway font-bold">CSS</h3>
+    </div>
+
+    <!-- JavaScript -->
+    <div class="bg-gray-50 p-6 rounded-xl text-center shadow-md
+                transition-transform duration-300 ease-in-out
+                hover:scale-105 hover:shadow-[0_0_20px_rgba(118,75,162,0.6)]">
+      <div class="text-[3rem] mb-4 bg-[linear-gradient(135deg,#764ba2,#667eea)] bg-clip-text">
+        <i class="fa-brands fa-js"></i>
+      </div>
+      <h3 class="font-raleway font-bold">JavaScript</h3>
+    </div>
+
+    <!-- Tailwind CSS -->
+    <div class="bg-gray-50 p-6 rounded-xl text-center shadow-md
+                transition-transform duration-300 ease-in-out
+                hover:scale-105 hover:shadow-[0_0_20px_rgba(118,75,162,0.6)]">
+      <div class="text-[3rem] mb-4 bg-[linear-gradient(135deg,#764ba2,#667eea)] bg-clip-text">
+        <i class="fa-solid fa-wind"></i>
+      </div>
+      <h3 class="font-raleway font-bold">Tailwind CSS</h3>
+    </div>
+
+    <!-- TypeScript -->
+    <div class="bg-gray-50 p-6 rounded-xl text-center shadow-md
+                transition-transform duration-300 ease-in-out
+                hover:scale-105 hover:shadow-[0_0_20px_rgba(118,75,162,0.6)]">
+      <div class="text-[3rem] mb-4 bg-[linear-gradient(135deg,#764ba2,#667eea)] bg-clip-text">
+        <i class="fa-solid fa-code"></i>
+      </div>
+      <h3 class="font-raleway font-bold">TypeScript</h3>
+    </div>
+
+    <!-- React -->
+    <div class="bg-gray-50 p-6 rounded-xl text-center shadow-md
+                transition-transform duration-300 ease-in-out
+                hover:scale-105 hover:shadow-[0_0_20px_rgba(118,75,162,0.6)]">
+      <div class="text-[3rem] mb-4 bg-[linear-gradient(135deg,#764ba2,#667eea)] bg-clip-text">
+        <i class="fa-brands fa-react"></i>
+      </div>
+      <h3 class="font-raleway font-bold">React</h3>
+    </div>
+
+    <!-- Github -->
+    <div class="bg-gray-50 p-6 rounded-xl text-center shadow-md
+                transition-transform duration-300 ease-in-out
+                hover:scale-105 hover:shadow-[0_0_20px_rgba(118,75,162,0.6)]">
+      <div class="text-[3rem] mb-4 bg-[linear-gradient(135deg,#764ba2,#667eea)] bg-clip-text">
+        <i class="fa-brands fa-github"></i>
+      </div>
+      <h3 class="font-raleway font-bold">Github</h3>
+    </div>
+
+    <!-- Figma -->
+    <div class="bg-gray-50 p-6 rounded-xl text-center shadow-md
+                transition-transform duration-300 ease-in-out
+                hover:scale-105 hover:shadow-[0_0_20px_rgba(118,75,162,0.6)]">
+      <div class="text-[3rem] mb-4 bg-[linear-gradient(135deg,#764ba2,#667eea)] bg-clip-text">
+        <i class="fa-brands fa-figma"></i>
+      </div>
+      <h3 class="font-raleway font-bold">Figma</h3>
+    </div>
+
+    <!-- Git -->
+    <div class="bg-gray-50 p-6 rounded-xl text-center shadow-md
+                transition-transform duration-300 ease-in-out
+                hover:scale-105 hover:shadow-[0_0_20px_rgba(118,75,162,0.6)]">
+      <div class="text-[3rem] mb-4 bg-[linear-gradient(135deg,#764ba2,#667eea)] bg-clip-text">
+        <i class="fa-brands fa-git-alt"></i>
+      </div>
+      <h3 class="font-raleway font-bold">Git</h3>
+    </div>
+
+    <!-- SASS -->
+    <div class="bg-gray-50 p-6 rounded-xl text-center shadow-md
+                transition-transform duration-300 ease-in-out
+                hover:scale-105 hover:shadow-[0_0_20px_rgba(118,75,162,0.6)]">
+      <div class="text-[3rem] mb-4 bg-[linear-gradient(135deg,#764ba2,#667eea)] bg-clip-text">
+        <i class="fa-brands fa-css3-alt"></i>
+      </div>
+      <h3 class="font-raleway font-bold">SASS</h3>
+    </div>
+
+    <!-- Firebase -->
+    <div class="bg-gray-50 p-6 rounded-xl text-center shadow-md
+                transition-transform duration-300 ease-in-out
+                hover:scale-105 hover:shadow-[0_0_20px_rgba(118,75,162,0.6)]">
+      <div class="text-[3rem] mb-4 bg-[linear-gradient(135deg,#764ba2,#667eea)] bg-clip-text">
+        <i class="fas fa-database"></i>
+      </div>
+      <h3 class="font-raleway font-bold">Firebase</h3>
+    </div>
+
+    <!-- Bootstrap -->
+    <div class="bg-gray-50 p-6 rounded-xl text-center shadow-md
+                transition-transform duration-300 ease-in-out
+                hover:scale-105 hover:shadow-[0_0_20px_rgba(118,75,162,0.6)]">
+      <div class="text-[3rem] mb-4 bg-[linear-gradient(135deg,#764ba2,#667eea)] bg-clip-text">
+        <i class="fas fa-bootstrap"></i>
+      </div>
+      <h3 class="font-raleway font-bold">Bootstrap</h3>
+    </div>
+
+  </div>
+</section>
+
+  <!--Project Section -->
+<section id="projects" class="bg-black font-raleway py-16 ">
+  <!-- Section Title -->
+  <h2 class="text-center text-white text-[3rem] -mt-8 md:text-[2.5rem] sm:text-[2rem] font-bold mb-4">
+    Featured Projects
+  </h2>
+  <p class="text-center text-white text-[20px] md:text-[18px] sm:text-[24px]">
+    Below are some of the projects I have worked on
+  </p>
+
+  <!-- Project Grid -->
+ <div class="grid grid-cols-1 md:grid-cols-2 -mb-4 lg:grid-cols-3 gap-8 p-6">
+
+    <!-- 1st Project -->
+    <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+      <img src="Images/preview2.jpg" alt="Rental Booking Site preview" class="h-[200px] w-full object-cover">
+      <div class="p-4">
+        <h3 class="text-[1.3rem] mb-2 text-center font-bold">RentHOMES</h3>
+
+        <div class="flex flex-wrap gap-2 mb-4 justify-center">
+          <span class="bg-[linear-gradient(135deg,#667eea,#764ba2)] text-white rounded-full px-4 py-1">HTML</span>
+          <span class="bg-[linear-gradient(135deg,#667eea,#764ba2)] text-white rounded-full px-4 py-1">CSS</span>
+          <span class="bg-[linear-gradient(135deg,#667eea,#764ba2)] text-white rounded-full px-4 py-1">JavaScript</span>
+        </div>
+
+        <div class="flex justify-center mb-2 gap-4">
+          <a href="https://clinton-pase.github.io/Rental-site/" class="no-underline font-bold transition-colors duration-300 hover:text-blue-600">Live Demo</a>
+          <a href="https://github.com/Clinton-Pase/Rental-site" class="no-underline font-bold transition-colors duration-300 hover:text-blue-600"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2nd Project -->
+    <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+      <img src="Images/preview3.jpg" alt="LinkWarden preview" class="h-[200px] w-full object-cover">
+      <div class="p-4">
+        <h3 class="text-[1.3rem] mb-2 text-center font-bold">LinkWARDEN</h3>
+
+        <div class="flex flex-wrap gap-2 mb-4 justify-center">
+          <span class="bg-[linear-gradient(135deg,#667eea,#764ba2)] text-white rounded-full px-4 py-1">HTML</span>
+          <span class="bg-[linear-gradient(135deg,#667eea,#764ba2)] text-white rounded-full px-4 py-1">Tailwind</span>
+          <span class="bg-[linear-gradient(135deg,#667eea,#764ba2)] text-white rounded-full px-4 py-1">JavaScript</span>
+        </div>
+
+        <div class="flex justify-center mb-2 gap-4">
+          <a href="https://link-warden.vercel.app/" class="no-underline font-bold transition-colors duration-300 hover:text-blue-600">Live Demo</a>
+          <a href="https://github.com/Clinton-Pase/LinkWarden" class="no-underline font-bold transition-colors duration-300 hover:text-blue-600"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3rd Project -->
+    <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+      <img src="Images/preview4.jpg" alt="Foodie Land preview" class="h-[200px] w-full object-cover">
+      <div class="p-4">
+        <h3 class="text-[1.3rem] mb-2 text-center font-bold">Foodie Land</h3>
+
+        <div class="flex flex-wrap gap-2 mb-4 justify-center">
+          <span class="bg-[linear-gradient(135deg,#667eea,#764ba2)] text-white rounded-full px-4 py-1">React</span>
+          <span class="bg-[linear-gradient(135deg,#667eea,#764ba2)] text-white rounded-full px-4 py-1">CSS</span>
+          <span class="bg-[linear-gradient(135deg,#667eea,#764ba2)] text-white rounded-full px-4 py-1">JavaScript</span>
+        </div>
+
+        <div class="flex justify-center mb-2 gap-4">
+          <a href="https://cooking-page.vercel.app/" class="no-underline font-bold transition-colors duration-300 hover:text-blue-600">Live Demo</a>
+          <a href="https://github.com/Clinton-Pase/Rental-site" class="no-underline font-bold transition-colors duration-300 hover:text-blue-600"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4th Project -->
+    <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 -mb-4  hover:-translate-y-1 hover:shadow-2xl">
+      <img src="Images/IMG_2912.jpeg" alt="Foodie Land preview duplicate" class="h-[200px] w-full object-cover">
+      <div class="p-4">
+        <h3 class="text-[1.3rem] mb-2 text-center font-bold">FarmLink</h3>
+
+        <div class="flex flex-wrap gap-2 mb-4 justify-center">
+          <span class="bg-[linear-gradient(135deg,#667eea,#764ba2)] text-white rounded-full px-4 py-1">React</span>
+          <span class="bg-[linear-gradient(135deg,#667eea,#764ba2)] text-white rounded-full px-4 py-1">Auth</span>
+          <span class="bg-[linear-gradient(135deg,#667eea,#764ba2)] text-white rounded-full px-4 py-1">Tailwind</span>
+           <span class="bg-[linear-gradient(135deg,#667eea,#764ba2)] text-white rounded-full px-4 py-1">TypeScript</span>
+        </div>
+
+        <div class="flex justify-center mb-2 gap-4">
+          <a href="https://farm-link-seven.vercel.app/" class="no-underline font-bold transition-colors duration-300 hover:text-blue-600">Live Demo</a>
+          <a href="https://github.com/Clinton-Pase/farm-link" class="no-underline font-bold transition-colors duration-300 hover:text-blue-600"></a>
+        </div>
+      </div>
+    </div>
+
+     <!-- 5th Project -->
+    <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 -mb-4  hover:-translate-y-1 hover:shadow-2xl">
+      <img src="Images/IMG_2917.jpeg" alt="Foodie Land preview duplicate" class="h-[200px] w-full object-cover">
+      <div class="p-4">
+        <h3 class="text-[1.3rem] mb-2 text-center font-bold">KOVA</h3>
+
+        <div class="flex flex-wrap gap-2 mb-4 justify-center">
+          <span class="bg-[linear-gradient(135deg,#667eea,#764ba2)] text-white rounded-full px-4 py-1">React</span>
+                   <span class="bg-[linear-gradient(135deg,#667eea,#764ba2)] text-white rounded-full px-4 py-1">Auth</span>
+          <span class="bg-[linear-gradient(135deg,#667eea,#764ba2)] text-white rounded-full px-4 py-1">Tailwind</span>
+          <span class="bg-[linear-gradient(135deg,#667eea,#764ba2)] text-white rounded-full px-4 py-1">TypeScript</span>
+        </div>
+
+        <div class="flex justify-center mb-2 gap-4">
+          <a href="https://kova-app-five.vercel.app/" class="no-underline font-bold transition-colors duration-300 hover:text-blue-600">Live Demo</a>
+          <a href="https://github.com/Clinton-Pase/Kova-App" class="no-underline font-bold transition-colors duration-300 hover:text-blue-600"></a>
+        </div>
+      </div>
+    </div>
+
+     <!-- 6th Project -->
+    <div class="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 -mb-4  hover:-translate-y-1 hover:shadow-2xl">
+      <img src="Images/IMG_2916.jpeg" alt="Foodie Land preview duplicate" class="h-[200px] w-full object-cover">
+      <div class="p-4">
+        <h3 class="text-[1.3rem] mb-2 text-center font-bold">Ethica</h3>
+
+        <div class="flex flex-wrap gap-2 mb-4 justify-center">
+          <span class="bg-[linear-gradient(135deg,#667eea,#764ba2)] text-white rounded-full px-4 py-1">Next.Js</span>
+          <span class="bg-[linear-gradient(135deg,#667eea,#764ba2)] text-white rounded-full px-4 py-1">Tailwind</span>
+          <span class="bg-[linear-gradient(135deg,#667eea,#764ba2)] text-white rounded-full px-4 py-1">TypeScript</span>
+        </div>
+
+        <div class="flex justify-center mb-2 gap-4">
+          <a href="https://ethicahq.space/" class="no-underline font-bold transition-colors duration-300 hover:text-blue-600">Live Demo</a>
+          <a href="https://github.com/Clinton-Pase/farm-link" class="no-underline font-bold transition-colors duration-300 hover:text-blue-600"></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Experience Section -->
+  <section id="experience" class="py-10 bg-black md:py-3">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="font-raleway text-4xl md:text-5xl font-bold text-center text-white mb-8 text-gradient">
+        Experience
+      </h2>
+      <p class="font-raleway text-center text-white mb-6 text-[1.2rem]">i’ve had experience working under the tutelage of
+        organisations and on freelance projects as well.</p>
+
+      <div class="relative sm:mb[-20px]">
+        <!-- Timeline line -->
+        <div
+          class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-primary rounded-full hidden md:block">
+        </div>
+
+        <!-- Experience Items -->
+        <div class="space-y-4 sm:space-y-8">
+          <!-- Experience 1 (LEFT) -->
+          <div class="relative flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 md:pr-12 ">
+              <div
+                class="experience-card left opacity-0 bg-black p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 md:ml-auto md:max-w-lg">
+                <div class="flex items-center mb-4">
+                  <div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center text-2xl text-white mr-4">
+                    🏢
+                  </div>
+                  <div>
+                    <h3 class="font-raleway text-2xl font-bold text-gray-50">Frontend Developer Intern(Remote)</h3>
+                    <p class="font-raleway text-primary text-white font-semibold">MavsCanvas</p>
+                    <p class="font-raleway text-gray-50 text-sm">Jan 2025 - Present</p>
+                  </div>
+                </div>
+                <ul class="font-raleway text-gray-50 space-y-2">
+                  <li class="font-raleway flex items-start">
+                    <span class="text-accent mr-2 mt-1">
+                      <i class="fas fa-check-circle"></i>
+                    </span>
+                    Contributed to development of 3+ responsive web applications using React and Tailwind CSS
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-accent mr-2 mt-1">
+                      <i class="fas fa-check-circle"></i>
+                    </span>
+                    Collaborated with cross-functional teams to define and implement new features
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-accent mr-2 mt-1">
+                      <i class="fas fa-check-circle"></i>
+                    </span>
+                    Implementing pixel-perfect designs
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-accent mr-2 mt-1">
+                      <i class="fas fa-check-circle"></i>
+                    </span>
+                    Web Maintenance and optimization for performance and SEO
+                  </li>
+                </ul>
+                <div class="flex flex-wrap gap-2 mt-4">
+                  <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">React.Js</span>
+                  <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
+                  <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                  <span class="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">Typescript</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Timeline dot -->
+            <div
+              class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-primary rounded-full border-4 border-white shadow-lg hidden md:block">
+            </div>
+
+            <div class="md:w-1/2 md:pl-12"></div>
+          </div>
+
+          <!-- Experience 2 (RIGHT) -->
+          <div class="relative font-raleway flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 md:pr-12 order-2 md:order-1"></div>
+
+            <!-- Timeline dot -->
+            <div
+              class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-primary rounded-full border-4 border-white shadow-lg hidden md:block">
+            </div>
+
+            <div class="md:w-1/2 md:pl-12 order-1 md:order-2">
+              <div
+                class="experience-card right opacity-0 bg-black p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 md:mr-auto md:max-w-lg">
+                <div class="flex items-center mb-4">
+                  <div
+                    class="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center text-2xl text-white mr-4">
+                    💻
+                  </div>
+                  <div>
+                    <h3 class="text-2xl font-bold text-white">Frontend Developer</h3>
+                    <p class="text-primary text-white font-semibold">HNG INTERNSHIP</p>
+                    <p class="text-gray-50 text-sm">Jun 2024 - Jul 2024</p>
+                  </div>
+                </div>
+                <ul class="text-gray-50 space-y-2">
+                  <li class="flex items-start">
+                    <span class="text-accent mr-2 mt-1">
+                      <i class="fas fa-check-circle"></i>
+                    </span>
+                    Built responsive websites using React
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-accent mr-2 mt-1">
+                      <i class="fas fa-check-circle"></i>
+                    </span>
+                    Collaborated with UX/UI designers to implement pixel-perfect designs
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-accent mr-2 mt-1">
+                      <i class="fas fa-check-circle"></i>
+                    </span>
+                    Integrated APIs and implemented state management
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-accent mr-2 mt-1">
+                      <i class="fas fa-check-circle"></i>
+                    </span>
+                    Worked in a team set-up using modern tools like Git,GitHub and frameworks like React.js
+                  </li>
+
+                </ul>
+                <div class="flex flex-wrap gap-2 mt-4">
+                  <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">HTML</span>
+                  <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">CSS</span>
+                  <span class="bg-pink-100 text-pink-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                  <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm">React.Js</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience 3 (LEFT) -->
+          <div class="relative font-raleway flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 md:pr-12 ">
+              <div
+                class="experience-card left opacity-0 bg-black p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 md:ml-auto md:max-w-lg">
+                <div class="flex items-center mb-4">
+                  <div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center text-2xl text-white mr-4">
+                    🚀
+                  </div>
+                  <div>
+                    <h3 class="text-2xl font-bold text-white">Intern</h3>
+                    <p class="text-primary text-white font-semibold">HNG Internship</p>
+                    <p class="text-white text-sm">May 2023 - May 2023</p>
+                  </div>
+                </div>
+                <ul class="text-gray-600 space-y-2">
+                  <li class="flex items-start text-white">
+                    <span class="text-accent mr-2 mt-1">
+                      <i class="fas fa-check-circle"></i>
+                    </span>
+                    Developed custom CSS themes and templates for use
+                  </li>
+                  <li class="flex items-start text-white">
+                    <span class="text-accent mr-2 mt-1">
+                      <i class="fas fa-check-circle"></i>
+                    </span>
+                    Created landing pages with HTML, CSS, and JavaScript
+                  </li>
+                  <li class="flex items-start text-white">
+                    <span class="text-accent mr-2 mt-1">
+                      <i class="fas fa-check-circle"></i>
+                    </span>
+                    Implemented responsive design principles across projects
+                  </li>
+                  <li class="flex items-start text-white">
+                    <span class="text-accent mr-2 mt-1">
+                      <i class="fas fa-check-circle"></i>
+                    </span>
+                    Built a custom E-commerce site using HTML, CSS, and JavaScript
+                  </li>
+                </ul>
+                <div class="flex flex-wrap gap-2 mt-4">
+                  <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">HTML</span>
+                  <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">CSS</span>
+                  <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Timeline dot -->
+            <div
+              class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-primary rounded-full border-4 border-white shadow-lg hidden md:block">
+            </div>
+
+            <div class="md:w-1/2 md:pl-12"></div>
+          </div>
+
+          <!--  Bootcamp (RIGHT) -->
+          <div class="relative font-raleway flex flex-col md:flex-row items-center -mb-8">
+            <div class="md:w-1/2 md:pr-12 order-2 md:order-1"></div>
+
+            <!-- Timeline dot -->
+            <div
+              class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-accent rounded-full border-4 border-white shadow-lg hidden md:block">
+            </div>
+
+            <div class="md:w-1/2 md:pl-12 order-1 md:order-2">
+              <div
+                class="experience-card right opacity-0 bg-gradient-to-r from-accent to-pink-400 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 md:mr-auto md:max-w-lg text-white">
+                <div class="flex items-center mb-4">
+                  <div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center text-2xl text-white mr-4">
+                    🎓
+                  </div>
+                  <div>
+                    <h3 class="text-2xl font-bold">The Zuri TEAM</h3>
+                    <p class="font-semibold opacity-90">Code Bootcamp</p>
+                    <p class="opacity-75 text-sm">Feb 2023 - March 2023</p>
+                  </div>
+                </div>
+                <ul class="space-y-2 opacity-90">
+                  <li class="flex items-start">
+                    <span class="text-accent mr-2 mt-1">
+                      <i class="fas fa-check-circle"></i>
+                    </span>
+                    Intensive 8weeks frontend development program
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-accent mr-2 mt-1">
+                      <i class="fas fa-check-circle"></i>
+                    </span>
+                    Built 2+ landing pages with just HTML & CSS from scratch
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-accent mr-2 mt-1">
+                      <i class="fas fa-check-circle"></i>
+                    </span>
+                    Learned modern development practices and workflows
+                  </li>
+
+                </ul>
+                <div class="flex flex-wrap gap-2 mt-4">
+                  <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">HTML</span>
+                  <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">CSS</span>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!--Blog Section-->
+
+<section id="blog" class="bg-black from-gray-900 via-black to-gray-900 py-16">
+  <div class="max-w-5xl mx-auto px-6 mb-[-50px]">
+    <!-- Heading -->
+    <h2 class="text-4xl font-bold text-center text-white mb-4 animate-bounce">
+      Check out my Blog posts
+    </h2>
+    <p class="blog-title text-gray-50 text-center mb-12">
+      In my free time,i share insights and thoughts on web development & design based on my experience.
+    </p>
+
+    <!-- Blog Grid -->
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      
+      <!-- Blog Card 1 -->
+      <article class="bg-gray-50 rounded-xl p-6 h-[13rem] shadow-lg hover:scale-105 hover:bg-gray-700 group transition-transform duration-300">
+        <h3 class="text-xl font-bold text-black mb-2 group-hover:text-white">Units in Web development</h3>
+        <p class="text-black mb-4 group-hover:text-white">Learn about various units used in modern web developments</p>
+        <a href="https://medium.com/@clintonadebowale13/units-in-web-developments-f42184dc681c" class="text-blue-400 font-semibold hover:underline group-hover:text-white">Read More →</a>
+      </article>
+
+      <!-- Blog Card 2 -->
+      <article class="bg-gray-50 rounded-xl p-6 h-[13rem] shadow-lg hover:scale-105 hover:bg-gray-700 group transition-transform duration-300">
+        <h3 class="text-xl font-bold text-black mb-2 group-hover:text-white">Know the basics</h3>
+        <p class="text-black mb-4 group-hover:text-white">A quick guide on how important being solid in the basics of modern web developments helps instill confidence </p>
+        <a href="https://medium.com/@clintonadebowale13/know-the-basics-6c4102bd3d00" class="text-blue-400 font-semibold hover:underline group-hover:text-white">Read More →</a>
+      </article>
+
+      <!-- Blog Card 3 -->
+      <article class="bg-gray-50 rounded-xl p-6 h-[13rem] shadow-lg hover:scale-105 hover:bg-gray-700 group transition-transform duration-300">
+        <h3 class="text-xl font-bold text-black mb-2  group-hover:text-white">40 basic terms a developer should know </h3>
+        <p class="text-black mb-4 group-hover:text-white">Discover why good UI/UX design is essential and how it impacts user engagement.</p>
+        <a href="https://medium.com/@clintonadebowale13/40-basic-terms-a-web-developer-must-know-b0a377d04c66" class="text-blue-400 font-semibold hover:underline group-hover:text-white">Read More →</a>
+      </article>
+
+    
+    </div>
+ <div class="text-center mt-12">
+      <a href="https://medium.com/me/stories?tab=posts-published" 
+         class="inline-block bg-gray-50 text-gray-950 px-6 py-3 rounded-full font-semibold shadow-md hover:bg-gray-300 hover:scale-105 transition-all duration-300">
+        View All Articles
+      </a>
+    </div>
+  </div>
+</section>
+  
+    <!-- Contact Section -->
+    <section id="contact" class="py-10 font-raleway bg-black text-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="fade-in text-4xl md:text-5xl font-bold text-center mb-8 text-white">Open to projects and collaborations</h2>
+            <p class=" fade-in text-center text-gray-300 mb-12 text-lg">I'm always open to discussing new opportunities and interesting projects.</p>
+            
+              <div class="fade-in  flex flex-wrap justify-center gap-6 max-w-3xl mx-auto">
+    
+    <!-- Email -->
+    <a href="mailto:clintonadebowale13@gmail.com" 
+       class="flex items-center gap-2 bg-red-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-600 hover:scale-105 transition-transform duration-300">
+      <i class="fas fa-envelope"></i>Email
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/2347057834651?text=Hello%20Clinton!" target="_blank"
+       class="flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-500 hover:scale-105 transition-transform duration-300">
+       <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/adebowale-clinton-pase-151b4423a/"
+       target="_blank"
+       class="flex items-center gap-2 bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:scale-105 transition-transform duration-300">
+ <i class="fab fa-linkedin"></i>LinkedIn
+    </a>
+
+    <!-- Twitter -->
+    <a href="https://x.com/clinton_pase"
+       target="_blank"
+       class="flex items-center gap-2 bg-sky-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-sky-400 hover:scale-105 transition-transform duration-300">
+     <i class="fab fa-twitter"></i> Twitter
+    </a>
+
+  </div>
+    
+
+        </div>
+    </section>
+
+    <footer class="bg-black  text-gray-300 py-6">
+  <div class="font-raleway max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+    
+    <!-- Logo -->
+    <div class="text-white text-xl font-bold mb-4 md:mb-0">
+         <a href="#" class="text-[white] text-[1.5rem] font-bold no-underline">Clinton-Pase</a>
+    </div>
+
+    <!-- Links -->
+    <nav class="flex space-x-8 text-sm font-medium">
+      <a href="#skills" class="hover:text-accent transition-colors">Skills</a>
+      <a href="#projects" class="hover:text-accent transition-colors">Projects</a>
+      <a href="#contact" class="hover:text-accent transition-colors">Contact</a>
+    </nav>
+  </div>
+   <p class="text-gray-50 text-center font-raleway mt-3">&copy; Made by P.M</p>
+</footer>
+
+
+<style>
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  .fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+   /* Title Animation */
+  @keyframes slideFade {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .blog-title {
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: slideFade 1s ease-out forwards;
+  }
+</style>
+
+<style>
+  #typewriter {
+    font-size: 1.2rem;
+    white-space: normal;
+    overflow: visible;
+  }
+</style>
+
+<!--Typewriter function-->
+
+<script>
+  const texts = [
+    "Hello! I'm a passionate web developer with 3 years of experience creating digital solutions.",
+    "I create beautiful and responsive websites using modern technologies.",
+    "I enjoy solving problems and bringing ideas to life on the web."
+  ];
+
+  let count = 0;
+  let index = 0;
+  let currentText = '';
+  let letter = '';
+  const speed = 40;  // typing speed
+
+  (function type() {
+    if (count === texts.length) {
+      count = 0; // loop back
+    }
+    currentText = texts[count];
+    letter = currentText.slice(0, ++index);
+
+    document.getElementById("typewriter").textContent = letter;
+
+    if (letter.length === currentText.length) {
+      // wait, then delete
+      setTimeout(() => {
+        (function erase() {
+          if (index > 0) {
+            letter = currentText.slice(0, --index);
+            document.getElementById("typewriter").textContent = letter;
+            setTimeout(erase, 40); // speed of deleting
+          } else {
+            count++;
+            setTimeout(type, 500); // pause before next
+          }
+        })();
+      }, 1500); // pause before deleting
+    } else {
+      setTimeout(type, speed);
+    }
+  })();
+</script>
+
+
+<!--firebase logic-->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+  // Firebase config
+  const firebaseConfig = {
+    apiKey: "AIzaSyCMJD7ZBMVCI5pYQUOGoErOL-fkMcMnpLo",
+    authDomain: "portfolio-contact-d2e6a.firebaseapp.com",
+    projectId: "portfolio-contact-d2e6a",
+    storageBucket: "portfolio-contact-d2e6a.firebasestorage.app",
+    messagingSenderId: "899468240857",
+    appId: "1:899468240857:web:11d41ac80fa2c6dbb61bc8"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  // Form logic
+  const form = document.getElementById("contact-form");
+  const popup = document.getElementById("popup");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    // ✅ Get values by ID
+    const nameValue = document.getElementById("name").value.trim();
+    const emailValue = document.getElementById("email").value.trim();
+    const messageValue = document.getElementById("message").value.trim();
+
+    try {
+      await addDoc(collection(db, "messages"), {
+        name: nameValue,
+        email: emailValue,
+        message: messageValue,
+        timestamp: new Date()
+      });
+
+      // Success popup
+      popup.style.opacity = "1";
+      popup.style.transform = "translateY(0)";
+      setTimeout(() => {
+        popup.style.opacity = "0";
+        popup.style.transform = "translateY(-20px)";
+      }, 3000);
+
+      form.reset();
+    } catch (error) {
+      alert("❌ Error sending message: " + error.message);
+    }
+  });
+</script>
+
+<!--tailwind animation for scroll up-->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // add your Tailwind animation class (defined in tailwind config)
+        entry.target.classList.add('animate-scrollUp');
+        // remove the initial hidden class so it doesn't conflict
+        entry.target.classList.remove('opacity-0');
+        // stop observing this element (play once)
+        obs.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.15 // trigger when ~15% of the element is visible
+  });
+
+  document.querySelectorAll('.js-scroll-up').forEach(el => observer.observe(el));
+});
+</script>
+
+<!---side menu functionality-->
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const sideMenu = document.getElementById("side-menu");
+  const closeMenu = document.getElementById("close-menu");
+
+  hamburger.addEventListener("click", () => {
+    sideMenu.classList.remove("translate-x-full");
+  });
+
+  closeMenu.addEventListener("click", () => {
+    sideMenu.classList.add("translate-x-full");
+  });
+</script>
+
+  <script>
+
+    // JavaScript for experience card animations
+    document.addEventListener("DOMContentLoaded", () => {
+      const cards = document.querySelectorAll(".experience-card");
+      let lastScrollY = window.scrollY;
+
+      const observer = new IntersectionObserver((entries) => {
+        const currentScroll = window.scrollY;
+        const goingDown = currentScroll > lastScrollY;
+        const goingUp = currentScroll < lastScrollY;
+
+        entries.forEach(entry => {
+          const el = entry.target;
+
+          if (entry.isIntersecting) {
+            // make visible
+            el.classList.remove('opacity-0');
+
+            if (goingDown) {
+              // play slide-in (downward scrolling)
+              if (el.classList.contains('left')) {
+                el.classList.remove('animate-slideOutLeft', 'animate-slideOutRight');
+                void el.offsetWidth; // force reflow so animation restarts
+                el.classList.add('animate-slideInLeft');
+              } else {
+                el.classList.remove('animate-slideOutLeft', 'animate-slideOutRight');
+                void el.offsetWidth;
+                el.classList.add('animate-slideInRight');
+              }
+            } else if (goingUp) {
+              // play slide-out (reverse when scrolling up)
+              if (el.classList.contains('left')) {
+                el.classList.remove('animate-slideInLeft', 'animate-slideInRight');
+                void el.offsetWidth;
+                el.classList.add('animate-slideOutLeft');
+              } else {
+                el.classList.remove('animate-slideInLeft', 'animate-slideInRight');
+                void el.offsetWidth;
+                el.classList.add('animate-slideOutRight');
+              }
+            }
+          } else {
+            // element left viewport — clear animations and hide so it can animate next time
+            el.classList.remove(
+              'animate-slideInLeft', 'animate-slideInRight',
+              'animate-slideOutLeft', 'animate-slideOutRight'
+            );
+            el.classList.add('opacity-0');
+          }
+        });
+
+        lastScrollY = currentScroll;
+      }, { threshold: 0.25 });
+
+      cards.forEach(card => observer.observe(card));
+    });
+
+  <!-- JavaScript for fade-in on scroll -->
+ const fadeEls = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    } else {
+      entry.target.classList.remove('show'); // reset when out of view
+    }
+  });
+}, { threshold: 0.2 });
+
+fadeEls.forEach(el => observer.observe(el));
+
+  </script>
+
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const html = document.documentElement;
+  const desktopBtn = document.getElementById('theme-toggle');
+  const mobileBtn = document.getElementById('theme-toggle-mobile');
+
+  function updateButtons(theme) {
+    const icon = theme === 'dark' ? '☀️' : '🌙';
+    if (desktopBtn) desktopBtn.textContent = icon;
+    if (mobileBtn) mobileBtn.textContent = icon;
+  }
+
+  function setTheme(theme) {
+    if (theme === 'dark') {
+      html.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+      updateButtons('dark');
+    } else {
+      html.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+      updateButtons('light');
+    }
+  }
+
+  // Determine initial theme:
+  const saved = localStorage.getItem('theme');
+  // You previously said your page is dark by default in markup.
+  // So if nothing is saved, default to "dark" to match your classes.
+  setTheme(saved || 'dark');
+
+  // Attach click handlers (safe: only if buttons exist)
+  [desktopBtn, mobileBtn].forEach(btn => {
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      setTheme(html.classList.contains('dark') ? 'light' : 'dark');
+    });
+  });
+
+  // Debug: print current state so you can check console
+  console.log('[theme] initialized — saved:', localStorage.getItem('theme'), 'html.class:', html.className);
+});
+</script>
+
+  <!--light theme functionality-->
+
+https://drive.google.com/uc?export=download&id=1MNkPFi1HyjU402pClx-IqKsYF_cH-2wX_I7C88diOQE
+
+
+</body>
+
+</html>
